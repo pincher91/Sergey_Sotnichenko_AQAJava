@@ -10,7 +10,7 @@ public class Main {
             System.out.println("1. Если введенное число больше 7, то вывести 'Привет'.");
             System.out.println("2. Поиск имени Вячеслав.");
             System.out.println("3. Числа кратные 3 в массиве.");
-            System.out.println("4. Выход.");
+            System.out.println("4. Выход");
 
             try {
                 choice = scanner.nextInt();
