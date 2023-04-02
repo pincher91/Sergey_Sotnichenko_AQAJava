@@ -6,17 +6,17 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         int choice = 0;
         while (choice != 4) {
-            System.out.println("Выберите алгоритм:");
-            System.out.println("1. Если введенное число больше 7, то вывести 'Привет'.");
-            System.out.println("2. Поиск имени Вячеслав.");
-            System.out.println("3. Числа кратные 3 в массиве.");
-            System.out.println("4. Выход.");
+            System.out.println("Р’С‹Р±РµСЂРёС‚Рµ Р°Р»РіРѕСЂРёС‚Рј:");
+            System.out.println("1. Р•СЃР»Рё РІРІРµРґРµРЅРЅРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ 7, С‚Рѕ РІС‹РІРµСЃС‚Рё 'РџСЂРёРІРµС‚'.");
+            System.out.println("2. РџРѕРёСЃРє РёРјРµРЅРё Р’СЏС‡РµСЃР»Р°РІ.");
+            System.out.println("3. Р§РёСЃР»Р° РєСЂР°С‚РЅС‹Рµ 3 РІ РјР°СЃСЃРёРІРµ.");
+            System.out.println("4. Р’С‹С…РѕРґ.");
 
             try {
                 choice = scanner.nextInt();
                 scanner.nextLine();
             } catch (Exception e) {
-                System.out.println("Ошибка! Введите целое число от 1 до 4");
+                System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 4");
                 scanner.nextLine();
                 continue;
             }
@@ -24,18 +24,18 @@ public class Main {
             switch (choice) {
                 case 1:
                     while (true) {
-                        System.out.println("Введите число:");
+                        System.out.println("Р’РІРµРґРёС‚Рµ С‡РёСЃР»Рѕ:");
                         try {
                             int num = scanner.nextInt();
                             scanner.nextLine();
                             if (num > 7) {
-                                System.out.println("Привет");
+                                System.out.println("РџСЂРёРІРµС‚");
                             } else {
-                                System.out.println("Число меньше или равно 7");
+                                System.out.println("Р§РёСЃР»Рѕ РјРµРЅСЊС€Рµ РёР»Рё СЂР°РІРЅРѕ 7");
                             }
                             break;
                         } catch (InputMismatchException e) {
-                            System.out.println("Ошибка! Введите целое число");
+                            System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ");
                             scanner.nextLine();
                         }
                     }
@@ -43,7 +43,7 @@ public class Main {
 
                 case 2:
                     while (true) {
-                        System.out.println("Введите имя:");
+                        System.out.println("Р’РІРµРґРёС‚Рµ РёРјСЏ:");
                         String name = scanner.nextLine().trim();
                         boolean isNameValid = true;
                         for (int i = 0; i < name.length(); i++) {
@@ -53,20 +53,20 @@ public class Main {
                             }
                         }
                         if (isNameValid) {
-                            if (name.equals("Вячеслав")) {
-                                System.out.println("Привет, Вячеслав");
+                            if (name.equals("Р’СЏС‡РµСЃР»Р°РІ")) {
+                                System.out.println("РџСЂРёРІРµС‚, Р’СЏС‡РµСЃР»Р°РІ");
                             } else {
-                                System.out.println("Нет такого имени");
+                                System.out.println("РќРµС‚ С‚Р°РєРѕРіРѕ РёРјРµРЅРё");
                             }
                             break;
                         } else {
-                            System.out.println("Ошибка! Имя должно содержать только буквы");
+                            System.out.println("РћС€РёР±РєР°! РРјСЏ РґРѕР»Р¶РЅРѕ СЃРѕРґРµСЂР¶Р°С‚СЊ С‚РѕР»СЊРєРѕ Р±СѓРєРІС‹");
                         }
                     }
                     break;
 
                 case 3:
-                    System.out.println("Введите целые числа через пробел:");
+                    System.out.println("Р’РІРµРґРёС‚Рµ С†РµР»С‹Рµ С‡РёСЃР»Р° С‡РµСЂРµР· РїСЂРѕР±РµР»:");
                     String[] input = scanner.nextLine().split("\\s+");
                     int[] array = new int[input.length];
                     boolean hasErrors = false;
@@ -74,13 +74,13 @@ public class Main {
                         try {
                             array[i] = Integer.parseInt(input[i]);
                         } catch (NumberFormatException e) {
-                            System.out.println("Ошибка! Введите целые числа через пробел");
+                            System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ С†РµР»С‹Рµ С‡РёСЃР»Р° С‡РµСЂРµР· РїСЂРѕР±РµР»");
                             hasErrors = true;
                             break;
                         }
                     }
                     if (!hasErrors) {
-                        System.out.println("Элементы массива, кратные 3:");
+                        System.out.println("Р­Р»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР°, РєСЂР°С‚РЅС‹Рµ 3:");
                         boolean hasMultiplesOfThree = false;
                         for (int num : array) {
                             if (num % 3 == 0) {
@@ -89,17 +89,17 @@ public class Main {
                             }
                         }
                         if (!hasMultiplesOfThree) {
-                            System.out.println("В массиве нет элементов, кратных 3");
+                            System.out.println("Р’ РјР°СЃСЃРёРІРµ РЅРµС‚ СЌР»РµРјРµРЅС‚РѕРІ, РєСЂР°С‚РЅС‹С… 3");
                         } else {
                             System.out.println();
                         }
                     }
                     break;
                 case 4:
-                    System.out.println("Выход из программы...");
+                    System.out.println("Р’С‹С…РѕРґ РёР· РїСЂРѕРіСЂР°РјРјС‹...");
                     break;
                 default:
-                    System.out.println("Ошибка! Введите целое число от 1 до 4");
+                    System.out.println("РћС€РёР±РєР°! Р’РІРµРґРёС‚Рµ С†РµР»РѕРµ С‡РёСЃР»Рѕ РѕС‚ 1 РґРѕ 4");
                     break;
             }
         }
